@@ -1,0 +1,27 @@
+{
+  "name": "github_repo_creator",
+  "version": "1.0.0",
+  "description": "creator of repo github",
+  "main": "github_creator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BastienBoymond/github_repo_creator.git"
+  },
+  "keywords": [
+    "github"
+  ],
+  "author": "Bastien Boymond",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BastienBoymond/github_repo_creator/issues"
+  },
+  "homepage": "https://github.com/BastienBoymond/github_repo_creator#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "ds": "^1.4.2",
+    "fs": "0.0.1-security"
+  }
+}

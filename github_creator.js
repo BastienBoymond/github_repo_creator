@@ -20,6 +20,8 @@ try {
 }
 
 function main() {
+    if (process.argv[2] === null)
+        return (console.log(Red, "Error do '-h' to see help"));
     if (process.argv[2] === "-h")
         return(print_help());
     if (add_token() == false)

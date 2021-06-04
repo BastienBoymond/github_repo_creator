@@ -1,9 +1,8 @@
-const axios = require('axios');
-const fs = require('fs');
+const {set_private} = require('./private.js')
+const {change_name} = require('./name.js')
+const {change_desc} = require('./description.js')
 
-const Red = "\033[0;31m"
-const Green = "\033[0;32m"
-const Blue = "\033[0;34m"
+const fs = require('fs');
 const data = "./data.json"
 let token;
 
@@ -18,12 +17,12 @@ try {
 
 function check_args(args, i)
 {
-    if (args[i][0] === '-') {
-        for (let j = 1; args[i][j]; j++) {
-            
-        }
-    }
+    if (args[i] === "--private")
+        set_private();
+    if (args[i] === "--name" && args[i + 1] != null)
+        change_name(args[i + 1]);
+    if (args[i] === "--desc" && args[i + 1] != null)
+        change_desc(args[i + 1])
 }
-
 
 module.exports = {check_args}

@@ -1,16 +1,7 @@
 const fs = require('fs');
+const {get_token} = require('./get_token.js')
 
-const data = "./data.json"
-let token;
-
-try {
-    token = JSON.parse(fs.readFileSync(data, 'utf8'));
-} catch (e) {
-    token = {
-        token:""
-    };
-    fs.writeFileSync(data, JSON.stringify(token));
-}
+let token = get_token();
 
 function change_desc(desc, info) 
 {

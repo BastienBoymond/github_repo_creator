@@ -1,5 +1,6 @@
 const {add_token} = require('./src/login.js')
 const {print_help} = require('./src/help.js')
+const {get_token} = require('./src/get_token.js')
 const {check_args} = require('./src/check_params.js')
 const {create_repo} = require('./src/create_repo.js')
 
@@ -11,16 +12,7 @@ const Blue = "\033[0;34m"
 const data = "./data.json"
 const template = "create_repo.json"
 let info;
-let token;
-
-try {
-    token = JSON.parse(fs.readFileSync(data, 'utf8'));
-} catch (e) {
-    token = {
-        token:""
-    };
-    fs.writeFileSync(data, JSON.stringify(token));
-}
+let token = get_token();
 
 try {
     info = JSON.parse(fs.readFileSync(template, 'utf8'));

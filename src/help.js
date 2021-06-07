@@ -1,4 +1,3 @@
-
 const Red = "\033[0;31m"
 const Green = "\033[0;32m"
 const Blue = "\033[0;34m"

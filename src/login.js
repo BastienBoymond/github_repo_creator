@@ -1,20 +1,14 @@
+const {get_token} = require('./get_token.js')
+
 const axios = require('axios');
 const fs = require('fs');
+
 
 const Red = "\033[0;31m"
 const Green = "\033[0;32m"
 const Blue = "\033[0;34m"
-const data = "./data.json"
-let token;
 
-try {
-    token = JSON.parse(fs.readFileSync(data, 'utf8'));
-} catch (e) {
-    token = {
-        token:""
-    };
-    fs.writeFileSync(data, JSON.stringify(token));
-}
+let token = get_token();
 
 function add_token() {
     for (let i = 0; process.argv[i]; i++) {

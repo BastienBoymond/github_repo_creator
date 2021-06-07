@@ -1,19 +1,11 @@
 const {set_private} = require('./private.js')
 const {change_name} = require('./name.js')
 const {change_desc} = require('./description.js')
+const {get_token} = require('./get_token.js')
 
 const fs = require('fs');
 const data = "./data.json"
-let token;
-
-try {
-    token = JSON.parse(fs.readFileSync(data, 'utf8'));
-} catch (e) {
-    token = {
-        token:""
-    };
-    fs.writeFileSync(data, JSON.stringify(token));
-}
+let token = get_token();
 
 function check_args(args, i, info)
 {

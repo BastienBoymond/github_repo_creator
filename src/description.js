@@ -12,7 +12,7 @@ try {
     fs.writeFileSync(data, JSON.stringify(token));
 }
 
-function change_desc(desc)
+function change_desc(desc, info) 
 {
 
 }

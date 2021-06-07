@@ -15,14 +15,14 @@ try {
     fs.writeFileSync(data, JSON.stringify(token));
 }
 
-function check_args(args, i)
+function check_args(args, i, info)
 {
     if (args[i] === "--private")
-        set_private();
+        set_private(info);
     if (args[i] === "--name" && args[i + 1] != null)
-        change_name(args[i + 1]);
+        change_name(args[i + 1], info);
     if (args[i] === "--desc" && args[i + 1] != null)
-        change_desc(args[i + 1])
+        change_desc(args[i + 1], info)
 }
 
 module.exports = {check_args}

@@ -12,7 +12,7 @@ try {
     fs.writeFileSync(data, JSON.stringify(token));
 }
 
-function set_private()
+function set_private(info)
 {
 
 }

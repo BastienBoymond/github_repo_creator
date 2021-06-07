@@ -1,4 +1,5 @@
 const fs = require('fs');
+const axios = require('axios')
 
 const data = "./data.json"
 let token;
@@ -12,9 +13,9 @@ try {
     fs.writeFileSync(data, JSON.stringify(token));
 }
 
-function change_name(name, info)
+function create_repo(info) 
 {
 
 }
 
-module.exports = {change_name}
+module.exports = {create_repo}

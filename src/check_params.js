@@ -10,11 +10,12 @@ let token = get_token();
 function check_args(args, i, info)
 {
     if (args[i] === "--private")
-        set_private(info);
+        info = set_private(info);
     if (args[i] === "--name" && args[i + 1] != null)
-        change_name(args[i + 1], info);
+        info = change_name(args[i + 1], info);
     if (args[i] === "--desc" && args[i + 1] != null)
-        change_desc(args[i + 1], info)
+        info = change_desc(args[i + 1], info)
+    return (info);
 }
 
 module.exports = {check_args}

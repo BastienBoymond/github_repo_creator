@@ -34,7 +34,7 @@ function main() {
     if (token == null)
         return(console.log(Red, "\nYou don't have token add it with flags --token\n"));
     for(let i = 0; process.argv[i]; i++) {
-        check_args(process.argv, i, info)
+        info = check_args(process.argv, i, info)
     }
     create_repo(info)
 }

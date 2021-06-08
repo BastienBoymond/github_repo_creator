@@ -8,6 +8,7 @@ let token = get_token();
 
 function create_repo(info) 
 {
+    console.log(info);
     axios.post('https://api.github.com/user/repos',info, {
         headers: {'Authorization': `token ${token.token}`}
     }).then(response => {

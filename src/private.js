@@ -6,7 +6,8 @@ let token = get_token();
 
 function set_private(info)
 {
-
+    info.private = !info.private;
+    return (info);
 }
 
 module.exports = {set_private}

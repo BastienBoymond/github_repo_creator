@@ -6,7 +6,9 @@ let token = get_token();
 
 function change_name(name, info)
 {
-
+    if (name != null)
+        info.name = name;
+    return (info);
 }
 
 module.exports = {change_name}

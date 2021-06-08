@@ -8,6 +8,7 @@ const Red = "\033[0;31m"
 const Green = "\033[0;32m"
 const Blue = "\033[0;34m"
 
+let data = "./data.json"
 let token = get_token();
 
 function add_token() {
@@ -15,6 +16,7 @@ function add_token() {
         if (process.argv[i] == "--token" && process.argv[i + 1] != null) {
             axios.get(`https://api.github.com/user`, {headers: {'Authorization': `token ${process.argv[i + 1]}`}}).then(response => {
                 if (response.data) {
+                    console.log(response.data)
                     token.token = process.argv[i + 1]
                     fs.writeFileSync(data, JSON.stringify(token));
                     return (console.log(Green, "\nToken add or modified\n"));

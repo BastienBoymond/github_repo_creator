@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const data = "../data.json"
+const data = "./data.json"
 
 function get_token() {
     let token;

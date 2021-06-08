@@ -9,7 +9,6 @@ const fs = require('fs');
 const Red = "\033[0;31m"
 const Green = "\033[0;32m"
 const Blue = "\033[0;34m"
-const data = "./data.json"
 const template = "create_repo.json"
 let info;
 let token = get_token();
@@ -32,7 +31,7 @@ function main() {
         return(print_help());
     if (add_token() == false)
         return (console.log(Red, "\nBad token\n"));
-    if (token.token == null)
+    if (token == null)
         return(console.log(Red, "\nYou don't have token add it with flags --token\n"));
     for(let i = 0; process.argv[i]; i++) {
         check_args(process.argv, i, info)

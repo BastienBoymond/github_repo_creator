@@ -14,6 +14,7 @@ function create_repo(info)
     }).then(response => {
         if (response.data)
             console.log(Green, `\nThe repository ${response.data.name} has been created\n`);
+            console.log(Green, `You Clone key was ${response.data.ssh_url}\n`);
     });
 }
 

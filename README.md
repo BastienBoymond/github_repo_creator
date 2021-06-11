@@ -6,9 +6,13 @@ He was create by a template
 # Flags
 
 -h = have a detail help
---token = put your Github token for the program
+
+--token = put your Github token for the program$
+
 --name = change the name of the repository
+
 --desc = changer the desc of the repository
+
 --private = set the repository in private default == Public
 
 # Dependency
